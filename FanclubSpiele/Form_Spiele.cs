@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FanclubSpiele.Jeopardy;
+using FanclubSpiele.JeoPardy;
 
 namespace FanclubSpiele
 {
@@ -53,6 +55,12 @@ namespace FanclubSpiele
         private void Spiel_DerDümmsteFliegt_btn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Spiel_Jeopardy_btn_Click(object sender, EventArgs e)
+        {
+            jeopardy Jeopardy = new jeopardy();
+            Jeopardy.Show();
         }
     }
 }

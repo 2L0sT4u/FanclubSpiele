@@ -8,10 +8,20 @@ namespace FanclubSpiele.JeoPardy
 {
     internal class Player
     {
-        public Player() {
-            string Name = string.Empty;
-            int Farbe = 0;
+        string name = string.Empty;
+        int color = 0;
+        int live = 0;
+        public Player(string name_ref,int color_ref) {
+            this.name = string.Empty;
+            this.color = color_ref;
+            this.live = 3;
         }
+
+        public void markPlayer(int color_ref)
+        {
+            this.color=color_ref;
+        }
+
 
 
         

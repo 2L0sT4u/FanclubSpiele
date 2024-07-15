@@ -54,6 +54,7 @@
             this.Spiel_Jeopardy_btn.TabIndex = 1;
             this.Spiel_Jeopardy_btn.Text = "JEOPARDY";
             this.Spiel_Jeopardy_btn.UseVisualStyleBackColor = true;
+            this.Spiel_Jeopardy_btn.Click += new System.EventHandler(this.Spiel_Jeopardy_btn_Click);
             // 
             // SpielerEingabe_txtbx
             // 

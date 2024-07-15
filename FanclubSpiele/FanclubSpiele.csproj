@@ -58,12 +58,21 @@
     <Compile Include="DerDümmsteFliegt\Form_DerDümmsteFliegt_Setup.Designer.cs">
       <DependentUpon>Form_DerDümmsteFliegt_Setup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Jeopardy\jeopardy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jeopardy\jeopardy.Designer.cs">
+      <DependentUpon>jeopardy.cs</DependentUpon>
+    </Compile>
     <Compile Include="JeoPardy\Player.cs" />
     <Compile Include="JeoPardy\Team.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Spiele.resx">
       <DependentUpon>Form_Spiele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jeopardy\jeopardy.resx">
+      <DependentUpon>jeopardy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -87,8 +96,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Jeopardy\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
