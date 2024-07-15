@@ -27,9 +27,12 @@ namespace FanclubSpiele
             //Spieler Name als String
             string spielerName = string.Empty;
             spielerName = SpielerEingabe_txtbx.Text;
-
+            Player p = new Player(spielerName, 0);
+            Team.PlayerList.Add(p);
+            
             //Spieler zur SpielerListe hinzufügen
             SpielerListe_lstbx.Items.Add(spielerName);
+            
 
             //Eingabefeld leeren
             SpielerEingabe_txtbx.Text = string.Empty;
@@ -39,6 +42,7 @@ namespace FanclubSpiele
         {
             //Alle Items der Spieler Liste entfernen
             SpielerListe_lstbx.Items.Clear();
+            Team.PlayerList.Clear();
         }
 
         //Events

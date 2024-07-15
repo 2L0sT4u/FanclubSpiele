@@ -22,6 +22,10 @@ namespace FanclubSpiele.JeoPardy
             this.color=color_ref;
         }
 
+        public int getColor() { return this.color; }
+        public void setColor(int color_ref) {  this.color = color_ref; }
+        public string getName() { return this.name; }
+
 
 
         
