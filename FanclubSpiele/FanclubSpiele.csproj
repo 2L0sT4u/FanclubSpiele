@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DerDümmsteFliegt\Klassen\Aufgabe.cs" />
+    <Compile Include="DerDümmsteFliegt\Klassen\Spieler.cs" />
     <Compile Include="Form_Spiele.cs">
       <SubType>Form</SubType>
     </Compile>
