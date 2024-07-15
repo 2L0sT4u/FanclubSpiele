@@ -16,7 +16,7 @@ namespace FanclubSpiele
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormSpiele());
+            Application.Run(new Form_Spiele());
         }
     }
 }

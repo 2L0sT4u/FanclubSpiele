@@ -1,6 +1,6 @@
 ﻿namespace FanclubSpiele
 {
-    partial class FormSpiele
+    partial class Form_Spiele
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -44,11 +44,11 @@
             this.Spiel_DerDümmsteFliegt_btn.TabIndex = 0;
             this.Spiel_DerDümmsteFliegt_btn.Text = "DER DÜMMSTE FLIEGT";
             this.Spiel_DerDümmsteFliegt_btn.UseVisualStyleBackColor = true;
-            this.Spiel_DerDümmsteFliegt_btn.Click += new System.EventHandler(this.button1_Click);
+            this.Spiel_DerDümmsteFliegt_btn.Click += new System.EventHandler(this.Spiel_DerDümmsteFliegt_btn_Click);
             // 
             // Spiel_Jeopardy_btn
             // 
-            this.Spiel_Jeopardy_btn.Location = new System.Drawing.Point(49, 247);
+            this.Spiel_Jeopardy_btn.Location = new System.Drawing.Point(49, 244);
             this.Spiel_Jeopardy_btn.Name = "Spiel_Jeopardy_btn";
             this.Spiel_Jeopardy_btn.Size = new System.Drawing.Size(644, 143);
             this.Spiel_Jeopardy_btn.TabIndex = 1;
@@ -75,9 +75,9 @@
             // SpielerHinzufügen_btn
             // 
             this.SpielerHinzufügen_btn.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.SpielerHinzufügen_btn.Location = new System.Drawing.Point(1278, 38);
+            this.SpielerHinzufügen_btn.Location = new System.Drawing.Point(1275, 38);
             this.SpielerHinzufügen_btn.Name = "SpielerHinzufügen_btn";
-            this.SpielerHinzufügen_btn.Size = new System.Drawing.Size(55, 48);
+            this.SpielerHinzufügen_btn.Size = new System.Drawing.Size(59, 49);
             this.SpielerHinzufügen_btn.TabIndex = 4;
             this.SpielerHinzufügen_btn.UseVisualStyleBackColor = false;
             this.SpielerHinzufügen_btn.Click += new System.EventHandler(this.SpielerHinzufügen_btn_Click);
@@ -93,7 +93,7 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // FormSpiele
+            // Form_Spiele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(23F, 42F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -106,7 +106,7 @@
             this.Controls.Add(this.Spiel_DerDümmsteFliegt_btn);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
-            this.Name = "FormSpiele";
+            this.Name = "Form_Spiele";
             this.Text = "Fanclub Spiele";
             this.ResumeLayout(false);
             this.PerformLayout();

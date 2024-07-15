@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace FanclubSpiele
 {
-    public partial class FormSpiele : Form
+    public partial class Form_Spiele : Form
     {
-        public FormSpiele()
+        public Form_Spiele()
         {
             InitializeComponent();
         }
@@ -40,12 +40,6 @@ namespace FanclubSpiele
         }
 
         //Events
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void SpielerHinzufügen_btn_Click(object sender, EventArgs e)
         {
             SpielerInListeHinzufügen();
@@ -54,6 +48,11 @@ namespace FanclubSpiele
         private void button1_Click_1(object sender, EventArgs e)
         {
             SpielerListeLeeren();
+        }
+
+        private void Spiel_DerDümmsteFliegt_btn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

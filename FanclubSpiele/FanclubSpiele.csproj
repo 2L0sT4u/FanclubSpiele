@@ -46,16 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormSpiele.cs">
+    <Compile Include="Form_Spiele.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSpiele.Designer.cs">
-      <DependentUpon>FormSpiele.cs</DependentUpon>
+    <Compile Include="Form_Spiele.Designer.cs">
+      <DependentUpon>Form_Spiele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DerDümmsteFliegt\Form_DerDümmsteFliegt_Setup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DerDümmsteFliegt\Form_DerDümmsteFliegt_Setup.Designer.cs">
+      <DependentUpon>Form_DerDümmsteFliegt_Setup.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormSpiele.resx">
-      <DependentUpon>FormSpiele.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Spiele.resx">
+      <DependentUpon>Form_Spiele.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,6 +84,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Jeopardy\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
