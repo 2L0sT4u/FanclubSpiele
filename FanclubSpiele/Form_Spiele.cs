@@ -20,6 +20,7 @@ namespace FanclubSpiele
             InitializeComponent();
         }
 
+
         //Funktionen
 
         private void SpielerInListeHinzufügen()
@@ -41,6 +42,7 @@ namespace FanclubSpiele
             SpielerListe_lstbx.Items.Clear();
         }
 
+
         //Events
         private void SpielerHinzufügen_btn_Click(object sender, EventArgs e)
         {
@@ -54,7 +56,7 @@ namespace FanclubSpiele
 
         private void Spiel_DerDümmsteFliegt_btn_Click(object sender, EventArgs e)
         {
-            Form_DerDümmsteFliegt_Setup DerDümmsteFliegtSetup = new Form_DerDümmsteFliegt_Setup();
+            Form_DerDümmsteFliegt_Setup DerDümmsteFliegtSetup = new Form_DerDümmsteFliegt_Setup(SpielerListe_lstbx.Items.Count);
             DerDümmsteFliegtSetup.Show();
         }
 
