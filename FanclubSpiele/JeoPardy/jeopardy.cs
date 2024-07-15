@@ -51,7 +51,7 @@ namespace FanclubSpiele.Jeopardy
             
             System.Windows.Forms.Label clickedLabel =sender as System.Windows.Forms.Label;
             int index = Team.Player_index_by_name(clickedLabel.Text);
-            if (clickedLabel!= null)
+            if (clickedLabel!= null && clickedLabel.ForeColor == Color.Gray)
             {
                 foreach ( KeyValuePair<System.Drawing.Color, int> pair in Team.TeamFarben){
 
