@@ -70,6 +70,9 @@
     <Compile Include="JeoPardy\Team.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DerDümmsteFliegt\Form_DerDümmsteFliegt_Setup.resx">
+      <DependentUpon>Form_DerDümmsteFliegt_Setup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Spiele.resx">
       <DependentUpon>Form_Spiele.cs</DependentUpon>
     </EmbeddedResource>

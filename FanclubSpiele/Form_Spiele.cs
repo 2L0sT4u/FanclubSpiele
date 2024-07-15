@@ -54,7 +54,8 @@ namespace FanclubSpiele
 
         private void Spiel_DerDümmsteFliegt_btn_Click(object sender, EventArgs e)
         {
-
+            Form_DerDümmsteFliegt_Setup DerDümmsteFliegtSetup = new Form_DerDümmsteFliegt_Setup();
+            DerDümmsteFliegtSetup.Show();
         }
 
         private void Spiel_Jeopardy_btn_Click(object sender, EventArgs e)

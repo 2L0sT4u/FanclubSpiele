@@ -8,7 +8,7 @@ namespace FanclubSpiele.DerDümmsteFliegt.Klassen
 {
     internal class Aufgabe
     {
-        private int id {  get; set; }
+        private int id { get; set; }
         private string frage { get; set; }
         private string antwort { get; set; }
     }
