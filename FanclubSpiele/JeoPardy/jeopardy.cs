@@ -36,6 +36,7 @@ namespace FanclubSpiele.Jeopardy
                 label.Location = new Point(50, startY + i * spacing); // Dynamische Positionierung
                 label.AutoSize = true;
                 label.Font = new Font("Arial", 20f);
+                label.ForeColor = Color.Gray;
 
                 label.MouseClick += Label_Mouseclick;
                 
@@ -44,31 +45,40 @@ namespace FanclubSpiele.Jeopardy
 
             }
         }
-        private int Teamsize_num = 2; private int counter = 0;
 
         private void Label_Mouseclick(object sender ,MouseEventArgs e)
         {
             
             System.Windows.Forms.Label clickedLabel =sender as System.Windows.Forms.Label;
             int index = Team.Player_index_by_name(clickedLabel.Text);
-            if (clickedLabel!= null && clickedLabel.ForeColor != Color.Black)
+            if (clickedLabel!= null)
             {
-                if (counter % Teamsize_num == 0)
-                {
-                    Team.Color_int_max += 1;
+                foreach ( KeyValuePair<System.Drawing.Color, int> pair in Team.TeamFarben){
+
+                    if (pair.Value < 2)
+                    {
+                        Team.TeamFarben[pair.Key]=pair.Value+1;
+                        clickedLabel.ForeColor = pair.Key;
+                        break;
+                    }
                 }
-                Team.PlayerList[index].setColor(Team.Color_int_max);
-                clickedLabel.ForeColor= Team.setColor(Team.Color_int_max) ;
                 
             }
-            else if (clickedLabel.ForeColor != Color.Black)
+            else if (clickedLabel.ForeColor != Color.Gray)
             {
-                clickedLabel.ForeColor = Color.Black;
+                foreach (KeyValuePair<System.Drawing.Color, int> pair in Team.TeamFarben)
+                {
+
+                    if (clickedLabel.ForeColor == pair.Key)
+                    {
+                        Team.TeamFarben[pair.Key] = pair.Value - 1;
+                        break;
+                    }
+                }
+                clickedLabel.ForeColor = Color.Gray;
 
 
             }
-            
-            counter++;//Farbwechsel bei jedem 2 wird der Farben Int bei dem Player verändert
 
         }
 

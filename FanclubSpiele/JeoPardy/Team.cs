@@ -10,7 +10,17 @@ namespace FanclubSpiele.JeoPardy
     internal class Team
     {
         public static  List<Player> PlayerList = new List<Player>();
-        public static Dictionary<System.Drawing.Color,int> TeamFarben = new Dictionary<System.Drawing.Color, int>();
+        public static Dictionary<System.Drawing.Color,int> TeamFarben = new Dictionary<System.Drawing.Color, int>()
+        {
+            { System.Drawing.Color.Black,0},
+            { System.Drawing.Color.Red,0},
+            { System.Drawing.Color.Green,0},
+            { System.Drawing.Color.Yellow,0},
+            { System.Drawing.Color.Blue,0},
+            { System.Drawing.Color.Purple,0},
+            { System.Drawing.Color.Brown,0},
+
+        };
 
         private Player p1; private Player p2;
         private int points = 0;
@@ -31,19 +41,6 @@ namespace FanclubSpiele.JeoPardy
                 }
             }
             return 0;
-        }
-        public static System.Drawing.Color setColor(int color) { 
-            switch (color)
-            {
-                case 0:return System.Drawing.Color.Black;
-                case 1: return System.Drawing.Color.Gray;
-                case 2: return System.Drawing.Color.Blue;
-                case 3: return System.Drawing.Color.Green;
-                case 4: return System.Drawing.Color.Red;
-                case 5: return System.Drawing.Color.Yellow;
-            }
-            return System.Drawing.Color.Black;
-                
         }
 
 
