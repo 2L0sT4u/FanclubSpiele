@@ -126,6 +126,7 @@
             this.add_btn.TabIndex = 6;
             this.add_btn.Text = "Hinzufügen";
             this.add_btn.UseVisualStyleBackColor = true;
+            this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
             // 
             // FragenDatenBank
             // 

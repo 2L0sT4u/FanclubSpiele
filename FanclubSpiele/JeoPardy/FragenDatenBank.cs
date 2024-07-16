@@ -16,5 +16,17 @@ namespace FanclubSpiele.Jeopardy
         {
             InitializeComponent();
         }
+
+        private void add_btn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(Fragebox.Text) || Fragebox.Text=="Frage" ||PunkteBox.Text=="Punkteanzahl"|| string.IsNullOrEmpty(GroupBox.Text) || GroupBox.Text == "Group" || string.IsNullOrEmpty(PunkteBox.Text)|| string.IsNullOrEmpty(AntwortBox.Text) || AntwortBox.Text == "Antwort")
+            {
+                Console.WriteLine("Fehler");
+            }
+            else
+            {
+
+            }
+        }
     }
 }
