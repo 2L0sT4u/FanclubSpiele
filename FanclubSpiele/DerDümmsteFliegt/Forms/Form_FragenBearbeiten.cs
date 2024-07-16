@@ -1,12 +1,15 @@
-﻿using System;
+﻿using FanclubSpiele.DerDümmsteFliegt.Klassen;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace FanclubSpiele.DerDümmsteFliegt.Forms
 {
@@ -15,7 +18,6 @@ namespace FanclubSpiele.DerDümmsteFliegt.Forms
         public Form_FragenBearbeiten(List<DerDümmsteFliegt.Klassen.Aufgabe> fragen_ref)
         {
             InitializeComponent();
-            dataGridView1.Columns["ID"].ValueType = typeof(Int32);
             UpdateGrid(fragen_ref);
             getFragen(fragen_ref);
 
@@ -28,17 +30,10 @@ namespace FanclubSpiele.DerDümmsteFliegt.Forms
 
         private void UpdateGrid(List<DerDümmsteFliegt.Klassen.Aufgabe> fragen)
         {
-            dataGridView1.Rows.Clear();
+            listBox1.Items.Clear();
             foreach (DerDümmsteFliegt.Klassen.Aufgabe aufgabe in fragen)
             {
-                dataGridView1.Rows.Add();
-                int rowIndex = dataGridView1.Rows.Count - 1;
-
-                dataGridView1.Rows[rowIndex].Cells["Id"].Value = aufgabe.id;
-                dataGridView1.Rows[rowIndex].Cells["Frage"].Value = aufgabe.frage;
-                dataGridView1.Rows[rowIndex].Cells["Antwort"].Value = aufgabe.antwort;
-
-                Console.WriteLine(Convert.ToString(aufgabe.id), aufgabe.frage, aufgabe.antwort);
+                listBox1.Items.Add($"{aufgabe.id}: {aufgabe.frage} -> {aufgabe.antwort}");
             }
         }
 
@@ -48,6 +43,25 @@ namespace FanclubSpiele.DerDümmsteFliegt.Forms
         {
             DerDümmsteFliegt.Klassen.Aufgabe aufgabe = new DerDümmsteFliegt.Klassen.Aufgabe(fragen.Count(), frage_txtbx.Text, antwort_txtbx.Text);
             fragen.Add(aufgabe);
+            UpdateGrid(fragen);
+        }
+
+        private void speichern_btn_Click(object sender, EventArgs e)
+        {
+            using (var stream = new FileStream("fragenDDF.xml", FileMode.Create))
+            {
+                XmlSerializer ser = new XmlSerializer(typeof(List<Aufgabe>));
+                ser.Serialize(stream, fragen);
+            }
+        }
+
+        private void laden_btn_Click(object sender, EventArgs e)
+        {
+            var ser = new XmlSerializer(typeof(List<Aufgabe>));
+            using (var reader = new StreamReader("fragenDDF.xml"))
+            {
+                fragen = (List<Aufgabe>)ser.Deserialize(reader);
+            }
             UpdateGrid(fragen);
         }
     }

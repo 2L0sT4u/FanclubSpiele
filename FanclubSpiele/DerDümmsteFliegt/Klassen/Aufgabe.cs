@@ -1,4 +1,8 @@
-﻿namespace FanclubSpiele.DerDümmsteFliegt.Klassen
+﻿using System.Collections.Generic;
+using System.IO;
+using System.Xml.Serialization;
+
+namespace FanclubSpiele.DerDümmsteFliegt.Klassen
 {
     public class Aufgabe
     {
@@ -12,6 +16,11 @@
             this.id = id;
             this.frage = frage;
             this.antwort = antwort;
+        }
+
+        public Aufgabe() 
+        { 
+
         }
     }
 }
