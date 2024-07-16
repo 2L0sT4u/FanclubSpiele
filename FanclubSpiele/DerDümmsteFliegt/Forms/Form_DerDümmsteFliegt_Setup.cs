@@ -1,12 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FanclubSpiele
@@ -36,7 +29,7 @@ namespace FanclubSpiele
             int rundenZeit = Convert.ToInt32(rundenZeit_nmupdwn.Value);
             int spielerAnzahl = anzahlSpieler;
 
-            minFragen = spielerAnzahl*spielerLeben*(rundenZeit/10);
+            minFragen = spielerAnzahl * spielerLeben * (rundenZeit / 10);
             EmpfFragen_lbl.Text = $"(Mindestens {minFragen} Fragen empfohlen)";
         }
 
