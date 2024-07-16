@@ -33,6 +33,7 @@ namespace FanclubSpiele.Jeopardy
             foreach (Team team in teams) {
                 System.Windows.Forms.Label label = new System.Windows.Forms.Label();
                 
+                label.Name = team.p1.getName() + "," + team.p2.getName();
                 label.Text =team.p1.getName()+","+team.p2.getName()+" "+team.getPoints().ToString();
                 label.Location = new Point(50, startY + i * spacing); // Dynamische Positionierung
                 label.AutoSize = true;
