@@ -16,15 +16,17 @@ namespace FanclubSpiele
         public Form_DerDümmsteFliegt_Setup(int anzahlSpieler_)
         {
             InitializeComponent();
-            setAnzahlSpieler(anzahlSpieler_);
+            getAnzahlSpieler(anzahlSpieler_);
             MinFragenEmpfohlen();
 
         }
         public int anzahlSpieler = 0;
-        private void setAnzahlSpieler(int anzahl)
+        private void getAnzahlSpieler(int anzahl)
         {
             anzahlSpieler = anzahl;
         }
+
+        List<DerDümmsteFliegt.Klassen.Aufgabe> fragen = new List<DerDümmsteFliegt.Klassen.Aufgabe>();
 
         //Funktionen
         private void MinFragenEmpfohlen()
@@ -47,6 +49,12 @@ namespace FanclubSpiele
         private void rundenZeit_nmupdwn_ValueChanged(object sender, EventArgs e)
         {
             MinFragenEmpfohlen();
+        }
+
+        private void FragenBearbeiten_btn_Click(object sender, EventArgs e)
+        {
+            DerDümmsteFliegt.Forms.Form_FragenBearbeiten fragenBearbeiten = new DerDümmsteFliegt.Forms.Form_FragenBearbeiten(fragen);
+            fragenBearbeiten.Show();
         }
     }
 }

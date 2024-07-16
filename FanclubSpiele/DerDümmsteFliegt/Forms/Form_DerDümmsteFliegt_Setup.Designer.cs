@@ -33,6 +33,9 @@
             this.EmpfFragen_lbl = new System.Windows.Forms.Label();
             this.rundenZeit_nmupdwn = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.FragenBearbeiten_btn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SpielerLeben_nmupdwn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rundenZeit_nmupdwn)).BeginInit();
             this.SuspendLayout();
@@ -72,7 +75,7 @@
             // EmpfFragen_lbl
             // 
             this.EmpfFragen_lbl.AutoSize = true;
-            this.EmpfFragen_lbl.Location = new System.Drawing.Point(463, 9);
+            this.EmpfFragen_lbl.Location = new System.Drawing.Point(12, 234);
             this.EmpfFragen_lbl.Name = "EmpfFragen_lbl";
             this.EmpfFragen_lbl.Size = new System.Drawing.Size(507, 42);
             this.EmpfFragen_lbl.TabIndex = 2;
@@ -115,11 +118,44 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Zeit pro Runde:";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 192);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(357, 42);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Anzahl Fragen: xxx";
+            // 
+            // FragenBearbeiten_btn
+            // 
+            this.FragenBearbeiten_btn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.FragenBearbeiten_btn.Location = new System.Drawing.Point(19, 296);
+            this.FragenBearbeiten_btn.Name = "FragenBearbeiten_btn";
+            this.FragenBearbeiten_btn.Size = new System.Drawing.Size(386, 64);
+            this.FragenBearbeiten_btn.TabIndex = 6;
+            this.FragenBearbeiten_btn.Text = "Fragen bearbeiten";
+            this.FragenBearbeiten_btn.UseVisualStyleBackColor = false;
+            this.FragenBearbeiten_btn.Click += new System.EventHandler(this.FragenBearbeiten_btn_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button2.Location = new System.Drawing.Point(19, 427);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(386, 105);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Spiel starten ";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // Form_DerDümmsteFliegt_Setup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(23F, 42F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1290, 680);
+            this.ClientSize = new System.Drawing.Size(532, 571);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.FragenBearbeiten_btn);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.rundenZeit_nmupdwn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.EmpfFragen_lbl);
@@ -143,5 +179,8 @@
         private System.Windows.Forms.Label EmpfFragen_lbl;
         private System.Windows.Forms.NumericUpDown rundenZeit_nmupdwn;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button FragenBearbeiten_btn;
+        private System.Windows.Forms.Button button2;
     }
 }

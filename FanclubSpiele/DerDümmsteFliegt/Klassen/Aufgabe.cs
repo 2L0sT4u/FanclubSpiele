@@ -6,10 +6,18 @@ using System.Threading.Tasks;
 
 namespace FanclubSpiele.DerDümmsteFliegt.Klassen
 {
-    internal class Aufgabe
+    public class Aufgabe
     {
         private int id { get; set; }
         private string frage { get; set; }
         private string antwort { get; set; }
+
+
+        public Aufgabe(int id, string frage, string antwort)
+        {
+            this.id = id;
+            this.frage = frage;
+            this.antwort = antwort;
+        }
     }
 }
