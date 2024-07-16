@@ -12,8 +12,6 @@ namespace FanclubSpiele.DerDümmsteFliegt.Forms
 {
     public partial class Form_FragenBearbeiten : Form
     {
-        private BindingSource bindingSource;
-
         public Form_FragenBearbeiten(List<DerDümmsteFliegt.Klassen.Aufgabe> fragen_ref)
         {
             InitializeComponent();
@@ -39,6 +37,8 @@ namespace FanclubSpiele.DerDümmsteFliegt.Forms
                 dataGridView1.Rows[rowIndex].Cells["Id"].Value = aufgabe.id;
                 dataGridView1.Rows[rowIndex].Cells["Frage"].Value = aufgabe.frage;
                 dataGridView1.Rows[rowIndex].Cells["Antwort"].Value = aufgabe.antwort;
+
+                Console.WriteLine(Convert.ToString(aufgabe.id), aufgabe.frage, aufgabe.antwort);
             }
         }
 
