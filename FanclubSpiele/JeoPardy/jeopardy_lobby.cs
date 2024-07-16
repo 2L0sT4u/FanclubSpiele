@@ -39,7 +39,7 @@ namespace FanclubSpiele.Jeopardy
                 label.Font = new Font("Arial", 20f);
                 label.ForeColor = Color.Gray;
 
-                label.MouseClick += Label_Mouseclick;
+                label.MouseClick += Team_click;
                 
                 labels.Add(label);
                 this.Controls.Add(label);
@@ -47,7 +47,7 @@ namespace FanclubSpiele.Jeopardy
             }
         }
 
-        private void Label_Mouseclick(object sender ,MouseEventArgs e)
+        private void Team_click(object sender ,MouseEventArgs e)
         {
             
             System.Windows.Forms.Label clickedLabel =sender as System.Windows.Forms.Label;
@@ -105,10 +105,8 @@ namespace FanclubSpiele.Jeopardy
 
         private void Reset_btn_Click(object sender, EventArgs e)
         {
-            foreach (KeyValuePair<System.Drawing.Color, int> pair in Team.TeamFarben)
-            {
-                Team.TeamFarben[pair.Key] = pair.Value - pair.Value;
-            }
+            Team.resetDictionaryValue();
+
             foreach (Player p in Team.PlayerList)
             {
                 p.setTeamid(-1);
