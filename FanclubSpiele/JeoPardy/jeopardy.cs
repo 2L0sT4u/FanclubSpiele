@@ -20,41 +20,29 @@ namespace FanclubSpiele.Jeopardy
         public jeopardy()
         {
             InitializeComponent();
-            CreateLabel(Team.PlayerList);
+            CreateLabel(Team.TeamsList);
         }
 
-        private void CreateLabel(List<Player> players)
+        private void CreateLabel(List<Team> teams)
         {
-            HashSet<int> Teamid = new HashSet<int>();
-            for (int i = 0; i < players.Count; i++) { Teamid.Add(players[i].getTeamid()); }
-
 
             int startY = 50; // Startposition für die Labels
             int spacing = 35; // Abstand zwischen den Labels
+            int i = 0;
             
+            foreach (Team team in teams) {
+                System.Windows.Forms.Label label = new System.Windows.Forms.Label();
+                
+                label.Text =team.p1.getName()+","+team.p2.getName()+" "+team.getPoints().ToString();
+                label.Location = new Point(50, startY + i * spacing); // Dynamische Positionierung
+                label.AutoSize = true;
+                label.Font = new Font("Arial", 20f);
 
-            for (int i = 0; i < players.Count; i++)
-            {
-                if (Teamid.Contains(players[i].getTeamid()))
-                {
-                    int partner_id_index = 0;
-                    for (int j = 0; j < players.Count; j++)
-                    {
-                        if (i == j) { continue; }
-                        if (players[i].getTeamid() == players[j].getTeamid()) { partner_id_index = j; }
+                i++;
+                labels.Add(label);
+                this.Controls.Add(label);
 
-                    }
 
-                    System.Windows.Forms.Label label = new System.Windows.Forms.Label();
-                    label.Name = players[i].getName() + "," + players[partner_id_index].getName();
-                    label.Text = players[i].getName() + ","+players[partner_id_index].getName();
-                    label.Location = new Point(50, startY + i * spacing); // Dynamische Positionierung
-                    label.AutoSize = true;
-                    label.Font = new Font("Arial", 20f);
-
-                    labels.Add(label);
-                    this.Controls.Add(label);
-                }
             }
         }
     }

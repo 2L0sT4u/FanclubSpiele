@@ -123,6 +123,7 @@ namespace FanclubSpiele.Jeopardy
                     }
                     Team team = new Team(Team.PlayerList[i], Team.PlayerList[partner_id_index]);
                     Team.TeamsList.Add(team);
+                    Teamid.Remove(Team.PlayerList[i].getTeamid());
                 }
                 
             }

@@ -35,7 +35,7 @@ namespace FanclubSpiele.JeoPardy
 
         };
 
-        private Player p1; private Player p2;
+        public Player p1; public Player p2;
         private int points = 0;
         
         public Team(Player p1_ref ,Player p2_ref)
@@ -44,6 +44,9 @@ namespace FanclubSpiele.JeoPardy
             this.p2 = p2_ref;
             this.points = 0;
         }
+        public int getPoints() {  return this.points; }
+        public void setPoints(int points) { this.points += points; }
+
         public static int Player_index_by_name(string name)
         {
             for(int i = 0; i < PlayerList.Count; i++)
@@ -52,19 +55,12 @@ namespace FanclubSpiele.JeoPardy
             }
             return 0;
         }
+
         public static int Player_index_by_Teamid(int ID)
         {
             for (int i = 0; i < PlayerList.Count; i++)
             {
                 if (PlayerList[i].getTeamid() == ID) { return i; }
-            }
-            return 0;
-        }
-        public static int Player_index_by_Teamid(int ID,List<Player>players)
-        {
-            for (int i = 0; i < players.Count; i++)
-            {
-                if (players[i].getTeamid() == ID) { return i; }
             }
             return 0;
         }
