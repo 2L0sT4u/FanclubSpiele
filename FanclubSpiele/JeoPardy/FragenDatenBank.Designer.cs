@@ -106,6 +106,12 @@
             // PunkteBox
             // 
             this.PunkteBox.FormattingEnabled = true;
+            this.PunkteBox.Items.AddRange(new object[] {
+            "100",
+            "200",
+            "300",
+            "400",
+            "500"});
             this.PunkteBox.Location = new System.Drawing.Point(549, 451);
             this.PunkteBox.Name = "PunkteBox";
             this.PunkteBox.Size = new System.Drawing.Size(121, 21);
