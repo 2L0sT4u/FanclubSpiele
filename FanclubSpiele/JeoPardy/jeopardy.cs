@@ -57,12 +57,13 @@ namespace FanclubSpiele.Jeopardy
 
                     if (pair.Value < 2)
                     {
+                        Team.PlayerList[index].setColor(pair.Key);
+                        Team.PlayerList[index].setTeamid(Team.TeamID[pair.Key]);
                         Team.TeamFarben[pair.Key]=pair.Value+1;
                         clickedLabel.ForeColor = pair.Key;
                         break;
                     }
                 }
-                
             }
             else if (clickedLabel.ForeColor != Color.Gray)
             {
@@ -71,6 +72,8 @@ namespace FanclubSpiele.Jeopardy
 
                     if (clickedLabel.ForeColor == pair.Key)
                     {
+                        Team.PlayerList[index].setColor(Color.Gray);
+                        Team.PlayerList[index].setTeamid(-1);
                         Team.TeamFarben[pair.Key] = pair.Value - 1;
                         break;
                     }

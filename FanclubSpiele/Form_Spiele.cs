@@ -27,7 +27,7 @@ namespace FanclubSpiele
             //Spieler Name als String
             string spielerName = string.Empty;
             spielerName = SpielerEingabe_txtbx.Text;
-            Player p = new Player(spielerName, 0);
+            Player p = new Player(spielerName);
             Team.PlayerList.Add(p);
             
             //Spieler zur SpielerListe hinzufügen

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,22 +10,18 @@ namespace FanclubSpiele.JeoPardy
     internal class Player
     {
         string name = string.Empty;
-        int color = 0;
-        int live = 0;
-        public Player(string name_ref,int color_ref) {
+        int Teamid; int live;
+        System.Drawing.Color TeamColor;
+        public Player(string name_ref) {
             this.name = name_ref;
-            this.color = color_ref;
             this.live = 3;
         }
 
-        public void markPlayer(int color_ref)
-        {
-            this.color=color_ref;
-        }
-
-        public int getColor() { return this.color; }
-        public void setColor(int color_ref) {  this.color = color_ref; }
+        public System.Drawing.Color getColor() { return this.TeamColor; }
+        public void setColor(System.Drawing.Color color_ref) {  this.TeamColor = color_ref; }
         public string getName() { return this.name; }
+        public int getTeamid() { return this.Teamid; }
+        public void setTeamid(int id) { this.Teamid = id; }
 
 
 

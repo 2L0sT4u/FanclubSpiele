@@ -21,6 +21,17 @@ namespace FanclubSpiele.JeoPardy
             { System.Drawing.Color.Brown,0},
 
         };
+        public static Dictionary<System.Drawing.Color, int> TeamID = new Dictionary<System.Drawing.Color, int>()
+        {
+            { System.Drawing.Color.Black,0},
+            { System.Drawing.Color.Red,1},
+            { System.Drawing.Color.Green,2},
+            { System.Drawing.Color.Yellow,3},
+            { System.Drawing.Color.Blue,4},
+            { System.Drawing.Color.Purple,5},
+            { System.Drawing.Color.Brown,6},
+
+        };
 
         private Player p1; private Player p2;
         private int points = 0;
