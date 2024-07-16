@@ -34,7 +34,6 @@
             this.rundenZeit_nmupdwn = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.FragenBearbeiten_btn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SpielerLeben_nmupdwn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rundenZeit_nmupdwn)).BeginInit();
@@ -127,21 +126,10 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Anzahl Fragen: xxx";
             // 
-            // FragenBearbeiten_btn
-            // 
-            this.FragenBearbeiten_btn.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.FragenBearbeiten_btn.Location = new System.Drawing.Point(19, 296);
-            this.FragenBearbeiten_btn.Name = "FragenBearbeiten_btn";
-            this.FragenBearbeiten_btn.Size = new System.Drawing.Size(386, 64);
-            this.FragenBearbeiten_btn.TabIndex = 6;
-            this.FragenBearbeiten_btn.Text = "Fragen bearbeiten";
-            this.FragenBearbeiten_btn.UseVisualStyleBackColor = false;
-            this.FragenBearbeiten_btn.Click += new System.EventHandler(this.FragenBearbeiten_btn_Click);
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button2.Location = new System.Drawing.Point(19, 427);
+            this.button2.Location = new System.Drawing.Point(19, 368);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(386, 105);
             this.button2.TabIndex = 7;
@@ -152,9 +140,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(23F, 42F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 571);
+            this.ClientSize = new System.Drawing.Size(661, 492);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.FragenBearbeiten_btn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.rundenZeit_nmupdwn);
             this.Controls.Add(this.label2);
@@ -180,7 +167,6 @@
         private System.Windows.Forms.NumericUpDown rundenZeit_nmupdwn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button FragenBearbeiten_btn;
         private System.Windows.Forms.Button button2;
     }
 }

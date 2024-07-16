@@ -34,7 +34,7 @@
             this.SpielerListe_lstbx = new System.Windows.Forms.ListBox();
             this.SpielerHinzufügen_btn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Fragen_DerDümmsteFliegt_btn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -96,14 +96,15 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // button2
+            // Fragen_DerDümmsteFliegt_btn
             // 
-            this.button2.Location = new System.Drawing.Point(460, 196);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(233, 50);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Fragen";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Fragen_DerDümmsteFliegt_btn.Location = new System.Drawing.Point(460, 196);
+            this.Fragen_DerDümmsteFliegt_btn.Name = "Fragen_DerDümmsteFliegt_btn";
+            this.Fragen_DerDümmsteFliegt_btn.Size = new System.Drawing.Size(233, 50);
+            this.Fragen_DerDümmsteFliegt_btn.TabIndex = 6;
+            this.Fragen_DerDümmsteFliegt_btn.Text = "Fragen";
+            this.Fragen_DerDümmsteFliegt_btn.UseVisualStyleBackColor = true;
+            this.Fragen_DerDümmsteFliegt_btn.Click += new System.EventHandler(this.Fragen_DerDümmsteFliegt_btn_Click);
             // 
             // button3
             // 
@@ -120,7 +121,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1366, 573);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Fragen_DerDümmsteFliegt_btn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.SpielerHinzufügen_btn);
             this.Controls.Add(this.SpielerListe_lstbx);
@@ -144,7 +145,7 @@
         private System.Windows.Forms.ListBox SpielerListe_lstbx;
         private System.Windows.Forms.Button SpielerHinzufügen_btn;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Fragen_DerDümmsteFliegt_btn;
         private System.Windows.Forms.Button button3;
     }
 }

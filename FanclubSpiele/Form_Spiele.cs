@@ -20,6 +20,7 @@ namespace FanclubSpiele
             InitializeComponent();
         }
 
+        List<DerDümmsteFliegt.Klassen.Aufgabe> aufgaben = new List<DerDümmsteFliegt.Klassen.Aufgabe>();
 
         //Funktionen
 
@@ -41,7 +42,7 @@ namespace FanclubSpiele
 
         private void SpielerListeLeeren()
         {
-            //Alle Items der Spieler Liste entfernen
+            //Alle Items der Spielerliste entfernen
             SpielerListe_lstbx.Items.Clear();
             Team.PlayerList.Clear();
         }
@@ -68,6 +69,12 @@ namespace FanclubSpiele
         {
             jeopardy Jeopardy = new jeopardy();
             Jeopardy.Show();
+        }
+
+        private void Fragen_DerDümmsteFliegt_btn_Click(object sender, EventArgs e)
+        {
+            DerDümmsteFliegt.Forms.Form_FragenBearbeiten fragenBearbeiten = new DerDümmsteFliegt.Forms.Form_FragenBearbeiten(aufgaben);
+            fragenBearbeiten.Show();
         }
     }
 }
