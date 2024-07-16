@@ -8,9 +8,9 @@ namespace FanclubSpiele.DerDümmsteFliegt.Klassen
 {
     internal class Spieler
     {
-        private int id { get; set; }
-        private string name { get; set; }
-        private string leben { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string leben { get; set; }
 
         public Spieler(int id, string name, string leben)
         {
