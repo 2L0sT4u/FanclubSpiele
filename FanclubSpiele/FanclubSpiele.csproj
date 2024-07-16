@@ -97,6 +97,9 @@
     <EmbeddedResource Include="Form_Spiele.resx">
       <DependentUpon>Form_Spiele.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Jeopardy\jeopardy.resx">
+      <DependentUpon>jeopardy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Jeopardy\jeopardy_lobby.resx">
       <DependentUpon>jeopardy_lobby.cs</DependentUpon>
     </EmbeddedResource>
