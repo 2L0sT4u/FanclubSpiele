@@ -135,6 +135,7 @@ namespace FanclubSpiele.Jeopardy
         private void Reset_btn_Click(object sender, EventArgs e)
         {
             Team.resetDictionaryValue();
+            Team.TeamsList.Clear();
             foreach (System.Windows.Forms.Label l in labels) { l.ForeColor = Color.Gray; }
             foreach (Player p in Team.PlayerList)
             {
