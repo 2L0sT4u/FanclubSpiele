@@ -20,34 +20,41 @@ namespace FanclubSpiele.Jeopardy
         public jeopardy()
         {
             InitializeComponent();
+            CreateLabel(Team.PlayerList);
         }
 
         private void CreateLabel(List<Player> players)
         {
             HashSet<int> Teamid = new HashSet<int>();
             for (int i = 0; i < players.Count; i++) { Teamid.Add(players[i].getTeamid()); }
-            
-            int index1 = 0; int index2 = 0;
 
 
             int startY = 50; // Startposition für die Labels
             int spacing = 35; // Abstand zwischen den Labels
+            
 
             for (int i = 0; i < players.Count; i++)
             {
-                System.Windows.Forms.Label label = new System.Windows.Forms.Label();
+                if (Teamid.Contains(players[i].getTeamid()))
+                {
+                    int partner_id_index = 0;
+                    for (int j = 0; j < players.Count; j++)
+                    {
+                        if (i == j) { continue; }
+                        if (players[i].getTeamid() == players[j].getTeamid()) { partner_id_index = j; }
 
+                    }
 
-                label.Text = players[i].getName();
-                label.Location = new Point(50, startY + i * spacing); // Dynamische Positionierung
-                label.AutoSize = true;
-                label.Font = new Font("Arial", 20f);
-                label.ForeColor = players[i].getColor();
+                    System.Windows.Forms.Label label = new System.Windows.Forms.Label();
+                    label.Name = players[i].getName() + "," + players[partner_id_index].getName();
+                    label.Text = players[i].getName() + ","+players[partner_id_index].getName();
+                    label.Location = new Point(50, startY + i * spacing); // Dynamische Positionierung
+                    label.AutoSize = true;
+                    label.Font = new Font("Arial", 20f);
 
-
-                labels.Add(label);
-                this.Controls.Add(label);
-
+                    labels.Add(label);
+                    this.Controls.Add(label);
+                }
             }
         }
     }

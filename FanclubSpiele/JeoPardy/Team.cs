@@ -10,6 +10,8 @@ namespace FanclubSpiele.JeoPardy
     internal class Team
     {
         public static  List<Player> PlayerList = new List<Player>();
+        public static List<Team>TeamsList=new List<Team>(){ };
+
         public static Dictionary<System.Drawing.Color,int> TeamFarben = new Dictionary<System.Drawing.Color, int>()
         {
             { System.Drawing.Color.Black,0},
@@ -46,13 +48,27 @@ namespace FanclubSpiele.JeoPardy
         {
             for(int i = 0; i < PlayerList.Count; i++)
             {
-                if (PlayerList[i].getName() == name)
-                {
-                    return i;
-                }
+                if (PlayerList[i].getName() == name) { return i; }
             }
             return 0;
         }
+        public static int Player_index_by_Teamid(int ID)
+        {
+            for (int i = 0; i < PlayerList.Count; i++)
+            {
+                if (PlayerList[i].getTeamid() == ID) { return i; }
+            }
+            return 0;
+        }
+        public static int Player_index_by_Teamid(int ID,List<Player>players)
+        {
+            for (int i = 0; i < players.Count; i++)
+            {
+                if (players[i].getTeamid() == ID) { return i; }
+            }
+            return 0;
+        }
+
         public static void setDictionaryValue(System.Drawing.Color c,int Value) { TeamFarben[c] = Value; }
         public static void resetDictionaryValue()
         {

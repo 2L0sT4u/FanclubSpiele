@@ -108,6 +108,25 @@ namespace FanclubSpiele.Jeopardy
 
         private void Play_btn_Click(object sender, EventArgs e)
         {
+            HashSet<int> Teamid = new HashSet<int>();
+            for (int i = 0; i < Team.PlayerList.Count; i++) { Teamid.Add(Team.PlayerList[i].getTeamid()); }
+
+            for (int i = 0; i < Team.PlayerList.Count; i++)
+            {
+                if (Teamid.Contains(Team.PlayerList[i].getTeamid()))
+                {
+                    int partner_id_index = 0;
+                    for (int j = 0; j < Team.PlayerList.Count; j++)
+                    {
+                        if (i == j) { continue; }
+                        if (Team.PlayerList[i].getTeamid() == Team.PlayerList[j].getTeamid()) { partner_id_index = j; }
+                    }
+                    Team team = new Team(Team.PlayerList[i], Team.PlayerList[partner_id_index]);
+                    Team.TeamsList.Add(team);
+                }
+                
+            }
+
             jeopardy jeopardy = new jeopardy();
             jeopardy.Show();
         }
