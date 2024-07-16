@@ -66,13 +66,14 @@ namespace FanclubSpiele
 
         private void Spiel_Jeopardy_btn_Click(object sender, EventArgs e)
         {
-            jeopardy Jeopardy = new jeopardy();
+            jeopardy_lobby Jeopardy = new jeopardy_lobby();
             Jeopardy.Show();
         }
 
         private void Fragen_Jeopardy_btn_Click(object sender, EventArgs e)
         {
-
+            FragenDatenBank fragenDatenBank = new FragenDatenBank();
+            fragenDatenBank.Show();
         }
     }
 }

@@ -53,6 +53,7 @@ namespace FanclubSpiele.JeoPardy
             }
             return 0;
         }
+        public static void setDictionaryValue(System.Drawing.Color c,int Value) { TeamFarben[c] = Value; }
 
 
     }
