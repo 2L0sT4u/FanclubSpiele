@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DerDümmsteFliegt\Forms\Form_FragenBearbeiten.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DerDümmsteFliegt\Forms\Form_FragenBearbeiten.Designer.cs">
+      <DependentUpon>Form_FragenBearbeiten.cs</DependentUpon>
+    </Compile>
     <Compile Include="DerDümmsteFliegt\Klassen\Aufgabe.cs" />
     <Compile Include="DerDümmsteFliegt\Klassen\Spieler.cs" />
     <Compile Include="Form_Spiele.cs">
@@ -54,10 +60,10 @@
     <Compile Include="Form_Spiele.Designer.cs">
       <DependentUpon>Form_Spiele.cs</DependentUpon>
     </Compile>
-    <Compile Include="DerDümmsteFliegt\Form_DerDümmsteFliegt_Setup.cs">
+    <Compile Include="DerDümmsteFliegt\Forms\Form_DerDümmsteFliegt_Setup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DerDümmsteFliegt\Form_DerDümmsteFliegt_Setup.Designer.cs">
+    <Compile Include="DerDümmsteFliegt\Forms\Form_DerDümmsteFliegt_Setup.Designer.cs">
       <DependentUpon>Form_DerDümmsteFliegt_Setup.cs</DependentUpon>
     </Compile>
     <Compile Include="Jeopardy\jeopardy.cs">
@@ -70,8 +76,11 @@
     <Compile Include="JeoPardy\Team.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DerDümmsteFliegt\Form_DerDümmsteFliegt_Setup.resx">
+    <EmbeddedResource Include="DerDümmsteFliegt\Forms\Form_DerDümmsteFliegt_Setup.resx">
       <DependentUpon>Form_DerDümmsteFliegt_Setup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DerDümmsteFliegt\Forms\Form_FragenBearbeiten.resx">
+      <DependentUpon>Form_FragenBearbeiten.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Spiele.resx">
       <DependentUpon>Form_Spiele.cs</DependentUpon>
