@@ -69,5 +69,10 @@ namespace FanclubSpiele
             jeopardy Jeopardy = new jeopardy();
             Jeopardy.Show();
         }
+
+        private void Fragen_Jeopardy_btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -64,6 +64,7 @@ namespace FanclubSpiele.Jeopardy
                         break;
                     }
                 }
+         
             }
             else if (clickedLabel.ForeColor != Color.Gray)
             {
@@ -79,8 +80,6 @@ namespace FanclubSpiele.Jeopardy
                     }
                 }
                 clickedLabel.ForeColor = Color.Gray;
-
-
             }
 
         }
