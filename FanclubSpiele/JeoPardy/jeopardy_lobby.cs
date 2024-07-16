@@ -94,6 +94,15 @@ namespace FanclubSpiele.Jeopardy
 
         private void Zufall_btn_Click(object sender, EventArgs e)
         {
+            Team.resetDictionaryValue();
+            foreach (System.Windows.Forms.Label l in labels) { l.ForeColor = Color.Gray; }
+            foreach (Player p in Team.PlayerList)
+            {
+                p.setTeamid(-1);
+                p.setColor(Color.Gray);
+            }
+
+            
 
         }
 
@@ -106,17 +115,11 @@ namespace FanclubSpiele.Jeopardy
         private void Reset_btn_Click(object sender, EventArgs e)
         {
             Team.resetDictionaryValue();
-
+            foreach (System.Windows.Forms.Label l in labels) { l.ForeColor = Color.Gray; }
             foreach (Player p in Team.PlayerList)
             {
                 p.setTeamid(-1);
                 p.setColor(Color.Gray);
-
-            }
- 
-            foreach (System.Windows.Forms.Label l in labels)
-            {
-                l.ForeColor = Color.Gray;
             }
         }
     }
