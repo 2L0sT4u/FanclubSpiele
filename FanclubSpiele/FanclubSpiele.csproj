@@ -66,7 +66,7 @@
     <Compile Include="DerDümmsteFliegt\Forms\Form_DerDümmsteFliegt_Setup.Designer.cs">
       <DependentUpon>Form_DerDümmsteFliegt_Setup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Jeopardy\Frage.cs" />
+    <Compile Include="Jeopardy\Fragen.cs" />
     <Compile Include="Jeopardy\FragenDatenBank.cs">
       <SubType>Form</SubType>
     </Compile>

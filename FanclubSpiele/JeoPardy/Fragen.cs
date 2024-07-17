@@ -3,19 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace FanclubSpiele.Jeopardy
 {
-    internal class Frage
+    [Serializable]
+    public  class Fragen
     {
-        public static List<Frage> FragenListe = new List<Frage>();
+        
 
         private string frage;
         private string antwort;
         private int reward;
         private string group;
 
-        public Frage(string Frage,string Antwort,string Group,int reward) {
+        public Fragen() { }
+
+        public Fragen(string Frage,string Antwort,string Group,int reward) {
             this.frage = Frage;
             this.antwort = Antwort;
             this.reward = reward;

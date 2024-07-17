@@ -10,11 +10,10 @@ namespace FanclubSpiele.JeoPardy
     internal class Player
     {
         string name = string.Empty;
-        int Teamid; int live;
+        int Teamid;
         System.Drawing.Color TeamColor;
         public Player(string name_ref) {
             this.name = name_ref;
-            this.live = 3;
         }
 
         public System.Drawing.Color getColor() { return this.TeamColor; }
