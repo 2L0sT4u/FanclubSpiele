@@ -25,8 +25,19 @@ namespace FanclubSpiele.Jeopardy
             }
             else
             {
+                DatenBank.Rows.Add(GroupBox.Text,Fragebox.Text,AntwortBox.Text,PunkteBox.Text);
 
             }
+        }
+
+        private void speichernToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ladenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
