@@ -12,6 +12,7 @@ namespace FanclubSpiele.Jeopardy
 {
     public partial class FragenDatenBank : Form
     {
+
         public FragenDatenBank()
         {
             InitializeComponent();
@@ -25,8 +26,9 @@ namespace FanclubSpiele.Jeopardy
             }
             else
             {
+                Fragen frage = new Fragen(Fragebox.Text, AntwortBox.Text, GroupBox.Text, Convert.ToInt16(PunkteBox.Text));
                 DatenBank.Rows.Add(GroupBox.Text,Fragebox.Text,AntwortBox.Text,PunkteBox.Text);
-
+                Fragen.FragenListe.Add(frage);
             }
         }
 

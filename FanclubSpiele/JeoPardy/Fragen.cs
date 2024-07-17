@@ -8,6 +8,8 @@ namespace FanclubSpiele.Jeopardy
 {
     internal class Frage
     {
+        public static List<Frage> FragenListe = new List<Frage>();
+
         private string frage;
         private string antwort;
         private int reward;
